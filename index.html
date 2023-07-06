@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="h-full">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              dmsans: 'DM Sans',
+              montserrat: 'Montserrat',
+            },
+            colors: {
+              bluesky: '#C2E9FB',
+              darkbluesky: '#A1C4FD',
+              clifford: '#da373d',
+            },
+          },
+        },
+      };
+    </script>
+    <title>Jogo da adivinhação</title>
+  </head>
+  <body
+    class="bg-gradient-to-r from-bluesky from-0% to-darkbluesky to-100% grid place-items-center h-full font-dmsans"
+  >
+    <main
+      class="bg-white shadow-md rounded-md pt-12 px-16 pb-16 w-[min(26.75rem,90%)] -mt-32 text-center"
+    >
+      <div class="d-non">
+        <h1 class="font-montserrat text-2xl mb-4 decoration-indigo-800">
+          Jogo da Adivinhação
+        </h1>
+        <p class="decoration-indigo-800 opacity-80">
+          Adivinhe um número entre 0 e 10
+        </p>
+
+        <form class="mt-12 flex justify-center">
+          <input
+            class="bg-slate-300 w-16 p-4 rounded-[4px] rounded-r-none"
+            type="number"
+          />
+          <button
+            class="font-dmsans bg-indigo-500 p-4 rounded-[4px] rounded-l-none text-white font-bold cursor-pointer hover:bg-indigo-600 transition duration-300"
+          >
+            Tentar
+          </button>
+        </form>
+      </div>
+
+      <div class="hidden">
+        <h2 class="decoration-indigo-800 font-dmsans text-xl mb-8">
+          Acertou em 3 tentativas!
+        </h2>
+        <button
+          class="font-dmsans bg-indigo-500 p-4 rounded-[4px] text-white font-bold cursor-pointer hover:bg-indigo-600 transition duration-300"
+        >
+          Jogar novamente
+        </button>
+      </div>
+    </main>
+  </body>
+</html>
