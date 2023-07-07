@@ -46,10 +46,12 @@
 
         <form class="mt-12 flex justify-center">
           <input
+            id="inputNumber"
             class="bg-slate-300 w-16 p-4 rounded-[4px] rounded-r-none"
             type="number"
           />
           <button
+            onclick="handleClick(event)"
             class="font-dmsans bg-indigo-500 p-4 rounded-[4px] rounded-l-none text-white font-bold cursor-pointer hover:bg-indigo-600 transition duration-300"
           >
             Tentar
@@ -68,5 +70,7 @@
         </button>
       </div>
     </main>
+
+    <script src="main.js"></script>
   </body>
 </html>
